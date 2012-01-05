@@ -2137,3 +2137,397 @@ Stack trace:
 REQUEST_URI=/mcs/index.php?r=site/login
 HTTP_REFERER=http://localhost/mcs/index.php?r=site/index
 ---
+2012/01/05 16:38:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "page".' in D:\hps\yii\framework\web\CController.php:484
+Stack trace:
+#0 D:\hps\yii\framework\web\CController.php(271): CController->missingAction('page')
+#1 D:\hps\yii\framework\web\CWebApplication.php(276): CController->run('page')
+#2 D:\hps\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('site/page')
+#3 D:\hps\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\hps\yiiwithtwig\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yiiwithtwig/index.php?r=site/page&view=about
+HTTP_REFERER=http://localhost/yiiwithtwig/
+---
+2012/01/05 16:39:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "about".' in D:\hps\yii\framework\web\CController.php:484
+Stack trace:
+#0 D:\hps\yii\framework\web\CController.php(271): CController->missingAction('about')
+#1 D:\hps\yii\framework\web\CWebApplication.php(276): CController->run('about')
+#2 D:\hps\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('site/about')
+#3 D:\hps\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\hps\yiiwithtwig\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yiiwithtwig/index.php?r=site/about
+---
+2012/01/05 16:40:57 [error] [exception.Twig_Error_Syntax] exception 'Twig_Error_Syntax' with message 'A template that extends another one cannot have a body in "\views\site\about.html" at line 3.' in D:\hps\yiiwithtwig\protected\extensions\Twig\Parser.php:332
+Stack trace:
+#0 D:\hps\yiiwithtwig\protected\extensions\Twig\Parser.php(346): Twig_Parser->filterBodyNodes(Object(Twig_Node_Text))
+#1 D:\hps\yiiwithtwig\protected\extensions\Twig\Parser.php(89): Twig_Parser->filterBodyNodes(Object(Twig_Node))
+#2 D:\hps\yiiwithtwig\protected\extensions\Twig\Environment.php(473): Twig_Parser->parse(Object(Twig_TokenStream))
+#3 D:\hps\yiiwithtwig\protected\extensions\Twig\Environment.php(523): Twig_Environment->parse(Object(Twig_TokenStream))
+#4 D:\hps\yiiwithtwig\protected\extensions\Twig\Environment.php(317): Twig_Environment->compileSource('{% extends 'vie...', '\views\site\abo...')
+#5 D:\hps\yiiwithtwig\protected\extensions\CTwigViewRenderer.php(69): Twig_Environment->loadTemplate('\views\site\abo...')
+#6 D:\hps\yii\framework\web\CBaseController.php(94): CTwigViewRenderer->renderFile(Object(SiteController), 'D:\hps\yiiwitht...', NULL, true)
+#7 D:\hps\yii\framework\web\CController.php(870): CBaseController->renderFile('D:\hps\yiiwitht...', NULL, true)
+#8 D:\hps\yii\framework\web\CController.php(783): CController->renderPartial('about', NULL, true)
+#9 D:\hps\yiiwithtwig\protected\controllers\SiteController.php(37): CController->render('about')
+#10 D:\hps\yii\framework\web\actions\CInlineAction.php(50): SiteController->actionAbout()
+#11 D:\hps\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#12 D:\hps\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#13 D:\hps\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 D:\hps\yii\framework\web\CWebApplication.php(276): CController->run('about')
+#15 D:\hps\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('site/about')
+#16 D:\hps\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#17 D:\hps\yiiwithtwig\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/yiiwithtwig/index.php?r=site/about
+---
+2012/01/05 16:45:25 [error] [exception.Twig_Error_Syntax] exception 'Twig_Error_Syntax' with message 'A hash key must be followed by a colon (:). Unexpected token "operator" of value "=" ("punctuation" expected with value ":") in "\views\site\contact.html" at line 28' in D:\hps\yiiwithtwig\protected\extensions\Twig\TokenStream.php:72
+Stack trace:
+#0 D:\hps\yiiwithtwig\protected\extensions\Twig\ExpressionParser.php(256): Twig_TokenStream->expect(9, ':', 'A hash key must...')
+#1 D:\hps\yiiwithtwig\protected\extensions\Twig\ExpressionParser.php(159): Twig_ExpressionParser->parseHashExpression()
+#2 D:\hps\yiiwithtwig\protected\extensions\Twig\ExpressionParser.php(85): Twig_ExpressionParser->parsePrimaryExpression()
+#3 D:\hps\yiiwithtwig\protected\extensions\Twig\ExpressionParser.php(42): Twig_ExpressionParser->getPrimary()
+#4 D:\hps\yiiwithtwig\protected\extensions\Twig\ExpressionParser.php(398): Twig_ExpressionParser->parseExpression()
+#5 D:\hps\yiiwithtwig\protected\extensions\Twig\ExpressionParser.php(338): Twig_ExpressionParser->parseArguments()
+#6 D:\hps\yiiwithtwig\protected\extensions\Twig\ExpressionParser.php(272): Twig_ExpressionParser->parseSubscriptExpression(Object(Twig_Node_Expression_Name))
+#7 D:\hps\yiiwithtwig\protected\extensions\Twig\ExpressionParser.php(165): Twig_ExpressionParser->parsePostfixExpression(Object(Twig_Node_Expression_Name))
+#8 D:\hps\yiiwithtwig\protected\extensions\Twig\ExpressionParser.php(85): Twig_ExpressionParser->parsePrimaryExpression()
+#9 D:\hps\yiiwithtwig\protected\extensions\Twig\ExpressionParser.php(42): Twig_ExpressionParser->getPrimary()
+#10 D:\hps\yiiwithtwig\protected\extensions\Twig\ExpressionParser.php(428): Twig_ExpressionParser->parseExpression()
+#11 D:\hps\yiiwithtwig\protected\extensions\Twig\TokenParser\Set.php(47): Twig_ExpressionParser->parseMultitargetExpression()
+#12 D:\hps\yiiwithtwig\protected\extensions\Twig\Parser.php(162): Twig_TokenParser_Set->parse(Object(Twig_Token))
+#13 D:\hps\yiiwithtwig\protected\extensions\Twig\TokenParser\If.php(49): Twig_Parser->subparse(Array)
+#14 D:\hps\yiiwithtwig\protected\extensions\Twig\Parser.php(162): Twig_TokenParser_If->parse(Object(Twig_Token))
+#15 D:\hps\yiiwithtwig\protected\extensions\Twig\TokenParser\Block.php(46): Twig_Parser->subparse(Array, true)
+#16 D:\hps\yiiwithtwig\protected\extensions\Twig\Parser.php(162): Twig_TokenParser_Block->parse(Object(Twig_Token))
+#17 D:\hps\yiiwithtwig\protected\extensions\Twig\Parser.php(86): Twig_Parser->subparse(NULL)
+#18 D:\hps\yiiwithtwig\protected\extensions\Twig\Environment.php(473): Twig_Parser->parse(Object(Twig_TokenStream))
+#19 D:\hps\yiiwithtwig\protected\extensions\Twig\Environment.php(523): Twig_Environment->parse(Object(Twig_TokenStream))
+#20 D:\hps\yiiwithtwig\protected\extensions\Twig\Environment.php(317): Twig_Environment->compileSource('{% extends "vie...', '\views\site\con...')
+#21 D:\hps\yiiwithtwig\protected\extensions\CTwigViewRenderer.php(69): Twig_Environment->loadTemplate('\views\site\con...')
+#22 D:\hps\yii\framework\web\CBaseController.php(94): CTwigViewRenderer->renderFile(Object(SiteController), 'D:\hps\yiiwitht...', Array, true)
+#23 D:\hps\yii\framework\web\CController.php(870): CBaseController->renderFile('D:\hps\yiiwitht...', Array, true)
+#24 D:\hps\yii\framework\web\CController.php(783): CController->renderPartial('contact', Array, true)
+#25 D:\hps\yiiwithtwig\protected\controllers\SiteController.php(71): CController->render('contact', Array)
+#26 D:\hps\yii\framework\web\actions\CInlineAction.php(50): SiteController->actionContact()
+#27 D:\hps\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#28 D:\hps\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#29 D:\hps\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#30 D:\hps\yii\framework\web\CWebApplication.php(276): CController->run('contact')
+#31 D:\hps\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('site/contact')
+#32 D:\hps\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#33 D:\hps\yiiwithtwig\index.php(13): CApplication->run()
+#34 {main}
+REQUEST_URI=/yiiwithtwig/index.php?r=site/contact
+HTTP_REFERER=http://localhost/yiiwithtwig/index.php?r=site/about
+---
+2012/01/05 16:45:32 [error] [exception.Twig_Error_Syntax] exception 'Twig_Error_Syntax' with message 'Unexpected end of template in "\views\site\contact.html"' in D:\hps\yiiwithtwig\protected\extensions\Twig\TokenStream.php:56
+Stack trace:
+#0 D:\hps\yiiwithtwig\protected\extensions\Twig\TokenParser\If.php(46): Twig_TokenStream->next()
+#1 D:\hps\yiiwithtwig\protected\extensions\Twig\Parser.php(162): Twig_TokenParser_If->parse(Object(Twig_Token))
+#2 D:\hps\yiiwithtwig\protected\extensions\Twig\TokenParser\Block.php(46): Twig_Parser->subparse(Array, true)
+#3 D:\hps\yiiwithtwig\protected\extensions\Twig\Parser.php(162): Twig_TokenParser_Block->parse(Object(Twig_Token))
+#4 D:\hps\yiiwithtwig\protected\extensions\Twig\Parser.php(86): Twig_Parser->subparse(NULL)
+#5 D:\hps\yiiwithtwig\protected\extensions\Twig\Environment.php(473): Twig_Parser->parse(Object(Twig_TokenStream))
+#6 D:\hps\yiiwithtwig\protected\extensions\Twig\Environment.php(523): Twig_Environment->parse(Object(Twig_TokenStream))
+#7 D:\hps\yiiwithtwig\protected\extensions\Twig\Environment.php(317): Twig_Environment->compileSource('{% extends "vie...', '\views\site\con...')
+#8 D:\hps\yiiwithtwig\protected\extensions\CTwigViewRenderer.php(69): Twig_Environment->loadTemplate('\views\site\con...')
+#9 D:\hps\yii\framework\web\CBaseController.php(94): CTwigViewRenderer->renderFile(Object(SiteController), 'D:\hps\yiiwitht...', Array, true)
+#10 D:\hps\yii\framework\web\CController.php(870): CBaseController->renderFile('D:\hps\yiiwitht...', Array, true)
+#11 D:\hps\yii\framework\web\CController.php(783): CController->renderPartial('contact', Array, true)
+#12 D:\hps\yiiwithtwig\protected\controllers\SiteController.php(71): CController->render('contact', Array)
+#13 D:\hps\yii\framework\web\actions\CInlineAction.php(50): SiteController->actionContact()
+#14 D:\hps\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#15 D:\hps\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#16 D:\hps\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 D:\hps\yii\framework\web\CWebApplication.php(276): CController->run('contact')
+#18 D:\hps\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('site/contact')
+#19 D:\hps\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#20 D:\hps\yiiwithtwig\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/yiiwithtwig/index.php?r=site/contact
+HTTP_REFERER=http://localhost/yiiwithtwig/index.php?r=site/about
+---
+2012/01/05 16:45:52 [error] [exception.CException] exception 'CException' with message 'SiteController contains improperly nested widget tags in its view "D:\hps\yiiwithtwig\protected\views\site\contact.html". A CActiveForm widget does not have an endWidget() call.' in D:\hps\yii\framework\web\CBaseController.php:102
+Stack trace:
+#0 D:\hps\yii\framework\web\CController.php(870): CBaseController->renderFile('D:\hps\yiiwitht...', Array, true)
+#1 D:\hps\yii\framework\web\CController.php(783): CController->renderPartial('contact', Array, true)
+#2 D:\hps\yiiwithtwig\protected\controllers\SiteController.php(71): CController->render('contact', Array)
+#3 D:\hps\yii\framework\web\actions\CInlineAction.php(50): SiteController->actionContact()
+#4 D:\hps\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 D:\hps\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#6 D:\hps\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\hps\yii\framework\web\CWebApplication.php(276): CController->run('contact')
+#8 D:\hps\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('site/contact')
+#9 D:\hps\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 D:\hps\yiiwithtwig\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yiiwithtwig/index.php?r=site/contact
+HTTP_REFERER=http://localhost/yiiwithtwig/index.php?r=site/about
+---
+2012/01/05 16:48:02 [error] [exception.CException] exception 'CException' with message 'SiteController contains improperly nested widget tags in its view "D:\hps\yiiwithtwig\protected\views\site\login.html". A CActiveForm widget does not have an endWidget() call.' in D:\hps\yii\framework\web\CBaseController.php:102
+Stack trace:
+#0 D:\hps\yii\framework\web\CController.php(870): CBaseController->renderFile('D:\hps\yiiwitht...', Array, true)
+#1 D:\hps\yii\framework\web\CController.php(783): CController->renderPartial('login', Array, true)
+#2 D:\hps\yiiwithtwig\protected\controllers\SiteController.php(97): CController->render('login', Array)
+#3 D:\hps\yii\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#4 D:\hps\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 D:\hps\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#6 D:\hps\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\hps\yii\framework\web\CWebApplication.php(276): CController->run('login')
+#8 D:\hps\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('site/login')
+#9 D:\hps\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 D:\hps\yiiwithtwig\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yiiwithtwig/index.php?r=site/login
+---
+2012/01/05 16:51:39 [error] [exception.CException] exception 'CException' with message 'SiteController contains improperly nested widget tags in its view "D:\hps\yiiwithtwig\protected\views\site\login.html". A CActiveForm widget does not have an endWidget() call.' in D:\hps\yii\framework\web\CBaseController.php:102
+Stack trace:
+#0 D:\hps\yii\framework\web\CController.php(870): CBaseController->renderFile('D:\hps\yiiwitht...', Array, true)
+#1 D:\hps\yii\framework\web\CController.php(783): CController->renderPartial('login', Array, true)
+#2 D:\hps\yiiwithtwig\protected\controllers\SiteController.php(97): CController->render('login', Array)
+#3 D:\hps\yii\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#4 D:\hps\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 D:\hps\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#6 D:\hps\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\hps\yii\framework\web\CWebApplication.php(276): CController->run('login')
+#8 D:\hps\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('site/login')
+#9 D:\hps\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 D:\hps\yiiwithtwig\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yiiwithtwig/index.php?r=site/login
+---
+2012/01/05 16:53:11 [error] [exception.CException] exception 'CException' with message 'SiteController contains improperly nested widget tags in its view "D:\hps\yiiwithtwig\protected\views\site\login.html". A CActiveForm widget does not have an endWidget() call.' in D:\hps\yii\framework\web\CBaseController.php:102
+Stack trace:
+#0 D:\hps\yii\framework\web\CController.php(870): CBaseController->renderFile('D:\hps\yiiwitht...', Array, true)
+#1 D:\hps\yii\framework\web\CController.php(783): CController->renderPartial('login', Array, true)
+#2 D:\hps\yiiwithtwig\protected\controllers\SiteController.php(97): CController->render('login', Array)
+#3 D:\hps\yii\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#4 D:\hps\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 D:\hps\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#6 D:\hps\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\hps\yii\framework\web\CWebApplication.php(276): CController->run('login')
+#8 D:\hps\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('site/login')
+#9 D:\hps\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 D:\hps\yiiwithtwig\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yiiwithtwig/index.php?r=site/login
+---
+2012/01/05 16:53:34 [error] [exception.CException] exception 'CException' with message 'SiteController contains improperly nested widget tags in its view "D:\hps\yiiwithtwig\protected\views\site\login.html". A CActiveForm widget does not have an endWidget() call.' in D:\hps\yii\framework\web\CBaseController.php:102
+Stack trace:
+#0 D:\hps\yii\framework\web\CController.php(870): CBaseController->renderFile('D:\hps\yiiwitht...', Array, true)
+#1 D:\hps\yii\framework\web\CController.php(783): CController->renderPartial('login', Array, true)
+#2 D:\hps\yiiwithtwig\protected\controllers\SiteController.php(97): CController->render('login', Array)
+#3 D:\hps\yii\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#4 D:\hps\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 D:\hps\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#6 D:\hps\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\hps\yii\framework\web\CWebApplication.php(276): CController->run('login')
+#8 D:\hps\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('site/login')
+#9 D:\hps\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 D:\hps\yiiwithtwig\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yiiwithtwig/index.php?r=site/login
+---
+2012/01/05 16:53:38 [error] [exception.CException] exception 'CException' with message 'SiteController contains improperly nested widget tags in its view "D:\hps\yiiwithtwig\protected\views\site\login.html". A CActiveForm widget does not have an endWidget() call.' in D:\hps\yii\framework\web\CBaseController.php:102
+Stack trace:
+#0 D:\hps\yii\framework\web\CController.php(870): CBaseController->renderFile('D:\hps\yiiwitht...', Array, true)
+#1 D:\hps\yii\framework\web\CController.php(783): CController->renderPartial('login', Array, true)
+#2 D:\hps\yiiwithtwig\protected\controllers\SiteController.php(97): CController->render('login', Array)
+#3 D:\hps\yii\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#4 D:\hps\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 D:\hps\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#6 D:\hps\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\hps\yii\framework\web\CWebApplication.php(276): CController->run('login')
+#8 D:\hps\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('site/login')
+#9 D:\hps\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 D:\hps\yiiwithtwig\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yiiwithtwig/index.php?r=site/login
+---
+2012/01/05 16:53:46 [error] [exception.CException] exception 'CException' with message 'SiteController contains improperly nested widget tags in its view "D:\hps\yiiwithtwig\protected\views\site\login.html". A CActiveForm widget does not have an endWidget() call.' in D:\hps\yii\framework\web\CBaseController.php:102
+Stack trace:
+#0 D:\hps\yii\framework\web\CController.php(870): CBaseController->renderFile('D:\hps\yiiwitht...', Array, true)
+#1 D:\hps\yii\framework\web\CController.php(783): CController->renderPartial('login', Array, true)
+#2 D:\hps\yiiwithtwig\protected\controllers\SiteController.php(97): CController->render('login', Array)
+#3 D:\hps\yii\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#4 D:\hps\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 D:\hps\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#6 D:\hps\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\hps\yii\framework\web\CWebApplication.php(276): CController->run('login')
+#8 D:\hps\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('site/login')
+#9 D:\hps\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 D:\hps\yiiwithtwig\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yiiwithtwig/index.php?r=site/login
+---
+2012/01/05 16:53:55 [error] [exception.CException] exception 'CException' with message 'SiteController contains improperly nested widget tags in its view "D:\hps\yiiwithtwig\protected\views\site\login.html". A CActiveForm widget does not have an endWidget() call.' in D:\hps\yii\framework\web\CBaseController.php:102
+Stack trace:
+#0 D:\hps\yii\framework\web\CController.php(870): CBaseController->renderFile('D:\hps\yiiwitht...', Array, true)
+#1 D:\hps\yii\framework\web\CController.php(783): CController->renderPartial('login', Array, true)
+#2 D:\hps\yiiwithtwig\protected\controllers\SiteController.php(97): CController->render('login', Array)
+#3 D:\hps\yii\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#4 D:\hps\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 D:\hps\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#6 D:\hps\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\hps\yii\framework\web\CWebApplication.php(276): CController->run('login')
+#8 D:\hps\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('site/login')
+#9 D:\hps\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 D:\hps\yiiwithtwig\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yiiwithtwig/index.php?r=site/login
+---
+2012/01/05 16:53:55 [error] [exception.CException] exception 'CException' with message 'SiteController contains improperly nested widget tags in its view "D:\hps\yiiwithtwig\protected\views\site\login.html". A CActiveForm widget does not have an endWidget() call.' in D:\hps\yii\framework\web\CBaseController.php:102
+Stack trace:
+#0 D:\hps\yii\framework\web\CController.php(870): CBaseController->renderFile('D:\hps\yiiwitht...', Array, true)
+#1 D:\hps\yii\framework\web\CController.php(783): CController->renderPartial('login', Array, true)
+#2 D:\hps\yiiwithtwig\protected\controllers\SiteController.php(97): CController->render('login', Array)
+#3 D:\hps\yii\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#4 D:\hps\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 D:\hps\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#6 D:\hps\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\hps\yii\framework\web\CWebApplication.php(276): CController->run('login')
+#8 D:\hps\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('site/login')
+#9 D:\hps\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 D:\hps\yiiwithtwig\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yiiwithtwig/index.php?r=site/login
+---
+2012/01/05 16:53:56 [error] [exception.CException] exception 'CException' with message 'SiteController contains improperly nested widget tags in its view "D:\hps\yiiwithtwig\protected\views\site\login.html". A CActiveForm widget does not have an endWidget() call.' in D:\hps\yii\framework\web\CBaseController.php:102
+Stack trace:
+#0 D:\hps\yii\framework\web\CController.php(870): CBaseController->renderFile('D:\hps\yiiwitht...', Array, true)
+#1 D:\hps\yii\framework\web\CController.php(783): CController->renderPartial('login', Array, true)
+#2 D:\hps\yiiwithtwig\protected\controllers\SiteController.php(97): CController->render('login', Array)
+#3 D:\hps\yii\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#4 D:\hps\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 D:\hps\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#6 D:\hps\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\hps\yii\framework\web\CWebApplication.php(276): CController->run('login')
+#8 D:\hps\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('site/login')
+#9 D:\hps\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 D:\hps\yiiwithtwig\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yiiwithtwig/index.php?r=site/login
+---
+2012/01/05 16:53:57 [error] [exception.CException] exception 'CException' with message 'SiteController contains improperly nested widget tags in its view "D:\hps\yiiwithtwig\protected\views\site\login.html". A CActiveForm widget does not have an endWidget() call.' in D:\hps\yii\framework\web\CBaseController.php:102
+Stack trace:
+#0 D:\hps\yii\framework\web\CController.php(870): CBaseController->renderFile('D:\hps\yiiwitht...', Array, true)
+#1 D:\hps\yii\framework\web\CController.php(783): CController->renderPartial('login', Array, true)
+#2 D:\hps\yiiwithtwig\protected\controllers\SiteController.php(97): CController->render('login', Array)
+#3 D:\hps\yii\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#4 D:\hps\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 D:\hps\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#6 D:\hps\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\hps\yii\framework\web\CWebApplication.php(276): CController->run('login')
+#8 D:\hps\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('site/login')
+#9 D:\hps\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 D:\hps\yiiwithtwig\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yiiwithtwig/index.php?r=site/login
+---
+2012/01/05 16:53:57 [error] [exception.CException] exception 'CException' with message 'SiteController contains improperly nested widget tags in its view "D:\hps\yiiwithtwig\protected\views\site\login.html". A CActiveForm widget does not have an endWidget() call.' in D:\hps\yii\framework\web\CBaseController.php:102
+Stack trace:
+#0 D:\hps\yii\framework\web\CController.php(870): CBaseController->renderFile('D:\hps\yiiwitht...', Array, true)
+#1 D:\hps\yii\framework\web\CController.php(783): CController->renderPartial('login', Array, true)
+#2 D:\hps\yiiwithtwig\protected\controllers\SiteController.php(97): CController->render('login', Array)
+#3 D:\hps\yii\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#4 D:\hps\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 D:\hps\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#6 D:\hps\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\hps\yii\framework\web\CWebApplication.php(276): CController->run('login')
+#8 D:\hps\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('site/login')
+#9 D:\hps\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 D:\hps\yiiwithtwig\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yiiwithtwig/index.php?r=site/login
+---
+2012/01/05 16:54:05 [error] [exception.CException] exception 'CException' with message 'SiteController contains improperly nested widget tags in its view "D:\hps\yiiwithtwig\protected\views\site\login.html". A CActiveForm widget does not have an endWidget() call.' in D:\hps\yii\framework\web\CBaseController.php:102
+Stack trace:
+#0 D:\hps\yii\framework\web\CController.php(870): CBaseController->renderFile('D:\hps\yiiwitht...', Array, true)
+#1 D:\hps\yii\framework\web\CController.php(783): CController->renderPartial('login', Array, true)
+#2 D:\hps\yiiwithtwig\protected\controllers\SiteController.php(97): CController->render('login', Array)
+#3 D:\hps\yii\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#4 D:\hps\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 D:\hps\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#6 D:\hps\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\hps\yii\framework\web\CWebApplication.php(276): CController->run('login')
+#8 D:\hps\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('site/login')
+#9 D:\hps\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 D:\hps\yiiwithtwig\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yiiwithtwig/index.php?r=site/login
+---
+2012/01/05 16:54:14 [error] [exception.CException] exception 'CException' with message 'SiteController contains improperly nested widget tags in its view "D:\hps\yiiwithtwig\protected\views\site\login.html". A CActiveForm widget does not have an endWidget() call.' in D:\hps\yii\framework\web\CBaseController.php:102
+Stack trace:
+#0 D:\hps\yii\framework\web\CController.php(870): CBaseController->renderFile('D:\hps\yiiwitht...', Array, true)
+#1 D:\hps\yii\framework\web\CController.php(783): CController->renderPartial('login', Array, true)
+#2 D:\hps\yiiwithtwig\protected\controllers\SiteController.php(97): CController->render('login', Array)
+#3 D:\hps\yii\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#4 D:\hps\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 D:\hps\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#6 D:\hps\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\hps\yii\framework\web\CWebApplication.php(276): CController->run('login')
+#8 D:\hps\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('site/login')
+#9 D:\hps\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 D:\hps\yiiwithtwig\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yiiwithtwig/index.php?r=site/login
+---
+2012/01/05 16:54:22 [error] [exception.Twig_Error_Syntax] exception 'Twig_Error_Syntax' with message 'Unexpected tag name "this" (expecting closing tag for the "block" tag defined near line 9) in "\views\site\login.html" at line 21' in D:\hps\yiiwithtwig\protected\extensions\Twig\Parser.php:149
+Stack trace:
+#0 D:\hps\yiiwithtwig\protected\extensions\Twig\TokenParser\Block.php(46): Twig_Parser->subparse(Array, true)
+#1 D:\hps\yiiwithtwig\protected\extensions\Twig\Parser.php(162): Twig_TokenParser_Block->parse(Object(Twig_Token))
+#2 D:\hps\yiiwithtwig\protected\extensions\Twig\Parser.php(86): Twig_Parser->subparse(NULL)
+#3 D:\hps\yiiwithtwig\protected\extensions\Twig\Environment.php(473): Twig_Parser->parse(Object(Twig_TokenStream))
+#4 D:\hps\yiiwithtwig\protected\extensions\Twig\Environment.php(523): Twig_Environment->parse(Object(Twig_TokenStream))
+#5 D:\hps\yiiwithtwig\protected\extensions\Twig\Environment.php(317): Twig_Environment->compileSource('{% extends 'vie...', '\views\site\log...')
+#6 D:\hps\yiiwithtwig\protected\extensions\CTwigViewRenderer.php(69): Twig_Environment->loadTemplate('\views\site\log...')
+#7 D:\hps\yii\framework\web\CBaseController.php(94): CTwigViewRenderer->renderFile(Object(SiteController), 'D:\hps\yiiwitht...', Array, true)
+#8 D:\hps\yii\framework\web\CController.php(870): CBaseController->renderFile('D:\hps\yiiwitht...', Array, true)
+#9 D:\hps\yii\framework\web\CController.php(783): CController->renderPartial('login', Array, true)
+#10 D:\hps\yiiwithtwig\protected\controllers\SiteController.php(97): CController->render('login', Array)
+#11 D:\hps\yii\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#12 D:\hps\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#13 D:\hps\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#14 D:\hps\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 D:\hps\yii\framework\web\CWebApplication.php(276): CController->run('login')
+#16 D:\hps\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('site/login')
+#17 D:\hps\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#18 D:\hps\yiiwithtwig\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/yiiwithtwig/index.php?r=site/login
+---
+2012/01/05 16:55:30 [error] [exception.CException] exception 'CException' with message 'SiteController contains improperly nested widget tags in its view "D:\hps\yiiwithtwig\protected\views\site\contact.html". A CActiveForm widget does not have an endWidget() call.' in D:\hps\yii\framework\web\CBaseController.php:102
+Stack trace:
+#0 D:\hps\yii\framework\web\CController.php(870): CBaseController->renderFile('D:\hps\yiiwitht...', Array, true)
+#1 D:\hps\yii\framework\web\CController.php(783): CController->renderPartial('contact', Array, true)
+#2 D:\hps\yiiwithtwig\protected\controllers\SiteController.php(71): CController->render('contact', Array)
+#3 D:\hps\yii\framework\web\actions\CInlineAction.php(50): SiteController->actionContact()
+#4 D:\hps\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 D:\hps\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#6 D:\hps\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\hps\yii\framework\web\CWebApplication.php(276): CController->run('contact')
+#8 D:\hps\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('site/contact')
+#9 D:\hps\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 D:\hps\yiiwithtwig\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yiiwithtwig/index.php?r=site/contact
+HTTP_REFERER=http://localhost/yiiwithtwig/index.php
+---
+2012/01/05 16:55:34 [error] [exception.CException] exception 'CException' with message 'SiteController contains improperly nested widget tags in its view "D:\hps\yiiwithtwig\protected\views\site\contact.html". A CActiveForm widget does not have an endWidget() call.' in D:\hps\yii\framework\web\CBaseController.php:102
+Stack trace:
+#0 D:\hps\yii\framework\web\CController.php(870): CBaseController->renderFile('D:\hps\yiiwitht...', Array, true)
+#1 D:\hps\yii\framework\web\CController.php(783): CController->renderPartial('contact', Array, true)
+#2 D:\hps\yiiwithtwig\protected\controllers\SiteController.php(71): CController->render('contact', Array)
+#3 D:\hps\yii\framework\web\actions\CInlineAction.php(50): SiteController->actionContact()
+#4 D:\hps\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 D:\hps\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#6 D:\hps\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\hps\yii\framework\web\CWebApplication.php(276): CController->run('contact')
+#8 D:\hps\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('site/contact')
+#9 D:\hps\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 D:\hps\yiiwithtwig\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yiiwithtwig/index.php?r=site/contact
+HTTP_REFERER=http://localhost/yiiwithtwig/index.php
+---
