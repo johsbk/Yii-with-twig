@@ -8,7 +8,6 @@ class __TwigTemplate_e5df816946c347f9537d2589d38e2675 extends Twig_Template
         parent::__construct($env);
 
         $this->blocks = array(
-            'head' => array($this, 'block_head'),
             'title' => array($this, 'block_title'),
             'content' => array($this, 'block_content'),
         );
@@ -24,33 +23,23 @@ class __TwigTemplate_e5df816946c347f9537d2589d38e2675 extends Twig_Template
         $this->getParent($context)->display($context, array_merge($this->blocks, $blocks));
     }
 
-    // line 2
-    public function block_head($context, array $blocks = array())
-    {
-        // line 3
-        echo "\t";
-        $this->displayParentBlock("head", $context, $blocks);
-        echo "
-";
-    }
-
-    // line 6
+    // line 3
     public function block_title($context, array $blocks = array())
     {
-        if (isset($context["app"])) { $_app_ = $context["app"]; } else { $_app_ = null; }
-        echo $this->getAttribute($_app_, "name");
+        if (isset($context["App"])) { $_App_ = $context["App"]; } else { $_App_ = null; }
+        echo twig_escape_filter($this->env, $this->getAttribute($_App_, "name"), "html", null, true);
     }
 
-    // line 7
+    // line 4
     public function block_content($context, array $blocks = array())
     {
-        // line 8
+        // line 5
         echo "
 <h1>Welcome to <i>";
-        // line 9
+        // line 6
         if (isset($context["C"])) { $_C_ = $context["C"]; } else { $_C_ = null; }
-        if (isset($context["app"])) { $_app_ = $context["app"]; } else { $_app_ = null; }
-        echo $this->getAttribute($this->getAttribute($_C_, "Html"), "encode", array($this->getAttribute($_app_, "name"), ), "method");
+        if (isset($context["App"])) { $_App_ = $context["App"]; } else { $_App_ = null; }
+        echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($_C_, "Html"), "encode", array($this->getAttribute($_App_, "name"), ), "method"), "html", null, true);
         echo "</i></h1>
 
 <p>Congratulations! You have successfully created your Yii application.</p>

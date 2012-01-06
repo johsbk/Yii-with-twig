@@ -29,8 +29,9 @@ class __TwigTemplate_89a55c07ecb5d88b464fcd563d61c4e8 extends Twig_Template
     public function block_title($context, array $blocks = array())
     {
         echo " ";
-        if (isset($context["app"])) { $_app_ = $context["app"]; } else { $_app_ = null; }
-        echo ($this->getAttribute($_app_, "name") . " - Login");
+        if (isset($context["App"])) { $_App_ = $context["App"]; } else { $_App_ = null; }
+        echo twig_escape_filter($this->env, $this->getAttribute($_App_, "name"), "html", null, true);
+        echo " - Login";
     }
 
     // line 5
@@ -91,7 +92,7 @@ class __TwigTemplate_89a55c07ecb5d88b464fcd563d61c4e8 extends Twig_Template
         echo $this->getAttribute($_form_, "error", array($_model_, "password", ), "method");
         echo "
 \t\t<p class=\"hint\">
-\t\t\tHint: You may login with <tt>demo/demo</tt> or <tt>admin/admin</tt>.
+\t\t\tHint: You may login with <code>demo/demo</code> or <code>admin/admin</code>.
 \t\t</p>
 \t</div>
 
@@ -127,7 +128,7 @@ class __TwigTemplate_89a55c07ecb5d88b464fcd563d61c4e8 extends Twig_Template
 ";
         // line 46
         if (isset($context["this"])) { $_this_ = $context["this"]; } else { $_this_ = null; }
-        echo ETwigViewRendererVoidFunction($this->getAttribute($_this_, "endWidget", array(), "method"));
+        echo twig_escape_filter($this->env, ETwigViewRendererVoidFunction($this->getAttribute($_this_, "endWidget", array(), "method")), "html", null, true);
         echo "
 </div><!-- form -->
 ";

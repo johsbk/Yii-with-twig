@@ -28,8 +28,8 @@ class __TwigTemplate_3aab7120b23ee974e481b55f028b5e2e extends Twig_Template
     // line 2
     public function block_title($context, array $blocks = array())
     {
-        if (isset($context["app"])) { $_app_ = $context["app"]; } else { $_app_ = null; }
-        echo twig_escape_filter($this->env, $this->getAttribute($_app_, "name"), "html", null, true);
+        if (isset($context["App"])) { $_App_ = $context["App"]; } else { $_App_ = null; }
+        echo twig_escape_filter($this->env, $this->getAttribute($_App_, "name"), "html", null, true);
         echo " - Contact Us";
     }
 
@@ -40,15 +40,15 @@ class __TwigTemplate_3aab7120b23ee974e481b55f028b5e2e extends Twig_Template
         echo "<h1>Contact Us</h1>
 ";
         // line 6
-        if (isset($context["app"])) { $_app_ = $context["app"]; } else { $_app_ = null; }
-        if ($this->getAttribute($this->getAttribute($_app_, "user"), "hasFlash", array("contact", ), "method")) {
+        if (isset($context["App"])) { $_App_ = $context["App"]; } else { $_App_ = null; }
+        if ($this->getAttribute($this->getAttribute($_App_, "user"), "hasFlash", array("contact", ), "method")) {
             // line 7
             echo "
 <div class=\"flash-success\">
 \t";
             // line 9
-            if (isset($context["app"])) { $_app_ = $context["app"]; } else { $_app_ = null; }
-            echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($_app_, "user"), "getFlash", array("contact", ), "method"), "html", null, true);
+            if (isset($context["App"])) { $_App_ = $context["App"]; } else { $_App_ = null; }
+            echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($_App_, "user"), "getFlash", array("contact", ), "method"), "html", null, true);
             echo "
 </div>
 
@@ -177,9 +177,10 @@ If you have business inquiries or other questions, please fill out the following
 \t\t";
                 // line 60
                 if (isset($context["this"])) { $_this_ = $context["this"]; } else { $_this_ = null; }
-                $context["widget"] = $this->getAttribute($_this_, "widget", array("CCaptcha", ), "method");
+                echo twig_escape_filter($this->env, ETwigViewRendererVoidFunction($this->getAttribute($_this_, "widget", array("CCaptcha", ), "method")), "html", null, true);
+                echo "
+\t\t";
                 // line 61
-                echo "\t\t";
                 if (isset($context["form"])) { $_form_ = $context["form"]; } else { $_form_ = null; }
                 if (isset($context["model"])) { $_model_ = $context["model"]; } else { $_model_ = null; }
                 echo $this->getAttribute($_form_, "textField", array($_model_, "verifyCode", ), "method");
