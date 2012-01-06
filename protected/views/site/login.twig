@@ -1,4 +1,4 @@
-{% extends 'views/layouts/main.html' %}
+{% extends 'views/layouts/main.twig' %}
 {% block title %} {{ app.name ~ ' - Login' }}{% endblock %}
 
 {% set bcs = ['Login'] %}
@@ -43,6 +43,6 @@
 		{{ C.Html.submitButton('Login')|raw }}
 	</div>
 
-{% set form = this.endWidget() %}
+{{ void(this.endWidget()) }}
 </div><!-- form -->
 {% endblock %}

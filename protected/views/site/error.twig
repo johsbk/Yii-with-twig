@@ -1,8 +1,7 @@
-{% extends 'views/layouts/main.html' %}
+{% extends 'views/layouts/main.twig' %}
 {% block title %}{{ app.name }} - Error{% endblock %}
 {% set bcs = ['Error'] %}
-{%block content %}
-
+{% block content %}
 <h2>Error {{ this.code }}</h2>
 
 <div class="error">

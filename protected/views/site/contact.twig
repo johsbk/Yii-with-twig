@@ -1,4 +1,4 @@
-{% extends "views/layouts/main.html" %}
+{% extends "views/layouts/main.twig" %}
 {% block title %}{{ app.name }} - Contact Us{% endblock %}
 {% set bcs = ['Contact'] %}
 {% block content %}
@@ -29,7 +29,7 @@ If you have business inquiries or other questions, please fill out the following
 
 	{{ form.errorSummary(model)|raw }}
 
-	<div class<="row">
+	<div class="row">
 		{{ form.labelEx(model,'name')|raw }}
 		{{ form.textField(model,'name')|raw }}
 		{{ form.error(model,'name')|raw }}
@@ -70,7 +70,7 @@ If you have business inquiries or other questions, please fill out the following
 		{{ C.Html.submitbutton('Submit')|raw }}
 	</div>
 
-{% set form = this.endWidget() %}
+{{ void(this.endWidget()) }}
 
 </div><!-- form -->
 

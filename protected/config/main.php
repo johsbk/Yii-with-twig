@@ -33,8 +33,11 @@ return array(
 	// application components
 	'components'=>array(
 		'viewRenderer'=>array(
-			'class'=>'application.extensions.CTwigViewRenderer',
-			'fileExtension' => '.html',
+			'class'=>'ext.ETwigViewRenderer',
+			'options'=>array(
+				'autoescape'=>true,
+			),
+			'fileExtension' => '.twig',
 		),
 		'user'=>array(
 			// enable cookie-based authentication
