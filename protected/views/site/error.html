@@ -1,0 +1,11 @@
+{% extends 'views/layouts/main.html' %}
+{% block title %}{{ app.name }} - Error{% endblock %}
+{% set bcs = ['Error'] %}
+{%block content %}
+
+<h2>Error {{ this.code }}</h2>
+
+<div class="error">
+{{ C.Html.encode(this.message) }}
+</div>
+{% endblock %}

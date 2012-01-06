@@ -37,7 +37,11 @@
 		},true)|raw }}
 	</div><!-- mainmenu -->
 	{% block breadcrumbs %}
-		
+		{% if bcs %}
+			{{ this.widget('zii.widgets.CBreadcrumbs', {
+				'links' : bcs,
+			},true)|raw }}
+		{% endif %}
 	{% endblock %}
 	<div id="content">
 	{% block content %}
