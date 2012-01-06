@@ -1,12 +1,9 @@
 {% extends "views/layouts/main.twig" %}
-{% block head %}
-	{{ parent() }}
-{% endblock %}
 
-{% block title %}{{ app.name }}{% endblock %} 
+{% block title %}{{ App.name }}{% endblock %} 
 {% block content %}
 
-<h1>Welcome to <i>{{ C.Html.encode(app.name) }}</i></h1>
+<h1>Welcome to <i>{{ C.Html.encode(App.name) }}</i></h1>
 
 <p>Congratulations! You have successfully created your Yii application.</p>
 

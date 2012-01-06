@@ -1,12 +1,12 @@
 {% extends "views/layouts/main.twig" %}
-{% block title %}{{ app.name }} - Contact Us{% endblock %}
+{% block title %}{{ App.name }} - Contact Us{% endblock %}
 {% set bcs = ['Contact'] %}
 {% block content %}
 <h1>Contact Us</h1>
-{% if app.user.hasFlash('contact') %}
+{% if App.user.hasFlash('contact') %}
 
 <div class="flash-success">
-	{{ app.user.getFlash('contact') }}
+	{{ App.user.getFlash('contact') }}
 </div>
 
 {% else %}
@@ -57,7 +57,7 @@ If you have business inquiries or other questions, please fill out the following
 	<div class="row">
 		{{ form.labelEx(model,'verifyCode')|raw }}
 		<div>
-		{% set widget = this.widget('CCaptcha') %}
+		{{ void(this.widget('CCaptcha')) }}
 		{{ form.textField(model,'verifyCode')|raw }}
 		</div>
 		<div class="hint">Please enter the letters as they are shown in the image above.
@@ -67,7 +67,7 @@ If you have business inquiries or other questions, please fill out the following
 	{% endif %}
 
 	<div class="row buttons">
-		{{ C.Html.submitbutton('Submit')|raw }}
+		{{ C.Html.submitbutton('Submit') }}
 	</div>
 
 {{ void(this.endWidget()) }}
