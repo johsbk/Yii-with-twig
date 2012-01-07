@@ -1,3 +1,9 @@
+<<<<<<< HEAD
 #Thu Jan 05 16:30:27 CET 2012
 eclipse.preferences.version=1
 include_path=0;/yiiwithtwig
+=======
+#Thu Jan 05 22:16:29 CET 2012
+eclipse.preferences.version=1
+include_path=0;/Yii-with-twig
+>>>>>>> 510d2aef28ab7df663c3a315534c801063c1f7ee

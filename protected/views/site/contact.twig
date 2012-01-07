@@ -1,0 +1,78 @@
+{% extends "views/layouts/main.twig" %}
+{% block title %}{{ App.name }} - Contact Us{% endblock %}
+{% set bcs = ['Contact'] %}
+{% block content %}
+<h1>Contact Us</h1>
+{% if App.user.hasFlash('contact') %}
+
+<div class="flash-success">
+	{{ App.user.getFlash('contact') }}
+</div>
+
+{% else %}
+
+<p>
+If you have business inquiries or other questions, please fill out the following form to contact us. Thank you.
+</p>
+
+<div class="form">
+
+{% set form=this.beginWidget('CActiveForm', {
+	'id':'contact-form',
+	'enableClientValidation':true,
+	'clientOptions':{
+		'validateOnSubmit':true,
+	},
+}) %}
+
+	<p class="note">Fields with <span class="required">*</span> are required.</p>
+
+	{{ form.errorSummary(model)|raw }}
+
+	<div class="row">
+		{{ form.labelEx(model,'name')|raw }}
+		{{ form.textField(model,'name')|raw }}
+		{{ form.error(model,'name')|raw }}
+	</div>
+
+	<div class="row">
+		{{ form.labelEx(model,'email')|raw }}
+		{{ form.textField(model,'email')|raw }}
+		{{ form.error(model,'email')|raw }}
+	</div>
+
+	<div class="row">
+		{{ form.labelEx(model,'subject')|raw }}
+		{{ form.textField(model,'subject')|raw }}
+		{{ form.error(model,'subject')|raw }}
+	</div>
+
+	<div class="row">
+		{{ form.labelEx(model,'body')|raw }}
+		{{ form.textArea(model,'body')|raw }}
+		{{ form.error(model,'body')|raw }}
+	</div>
+
+	{% if C.Captcha.checkRequirements() %}
+	<div class="row">
+		{{ form.labelEx(model,'verifyCode')|raw }}
+		<div>
+		{{ void(this.widget('CCaptcha')) }}
+		{{ form.textField(model,'verifyCode')|raw }}
+		</div>
+		<div class="hint">Please enter the letters as they are shown in the image above.
+		<br/>Letters are not case-sensitive.</div>
+		{{ form.error(model,'verifyCode')|raw }}
+	</div>
+	{% endif %}
+
+	<div class="row buttons">
+		{{ C.Html.submitbutton('Submit')|raw }}
+	</div>
+
+{{ void(this.endWidget()) }}
+
+</div><!-- form -->
+
+{% endif %}
+{% endblock %}

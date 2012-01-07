@@ -26,6 +26,7 @@ class SiteController extends Controller
 		// using the default layout 'protected/views/layouts/main.php'
 		$this->render('index');
 	}
+<<<<<<< HEAD
 	
 	/**
 	* Displays the contact page
@@ -37,6 +38,11 @@ class SiteController extends Controller
 		$this->render('about');
 	}
 
+=======
+	public function actionAbout() {
+		$this->render('about');
+	}
+>>>>>>> 510d2aef28ab7df663c3a315534c801063c1f7ee
 	/**
 	 * This is the action to handle external exceptions.
 	 */

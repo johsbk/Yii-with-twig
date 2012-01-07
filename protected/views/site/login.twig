@@ -1,0 +1,48 @@
+{% extends 'views/layouts/main.twig' %}
+{% block title %} {{ App.name }} - Login{% endblock %}
+
+{% set bcs = ['Login'] %}
+{% block content %}
+<h1>Login</h1>
+
+<p>Please fill out the following form with your login credentials:</p>
+
+<div class="form">
+{% set form = this.beginWidget('CActiveForm', {
+	'id':'login-form',
+	'enableClientValidation':true,
+	'clientOptions':{
+		'validateOnSubmit':true,
+	},
+}) %}
+
+	<p class="note">Fields with <span class="required">*</span> are required.</p>
+
+	<div class="row">
+		{{ form.labelEx(model,'username')|raw }}
+		{{ form.textField(model,'username')|raw }}
+		{{ form.error(model,'username')|raw }}
+	</div>
+
+	<div class="row">
+		{{ form.labelEx(model,'password')|raw }}
+		{{ form.passwordField(model,'password')|raw }}
+		{{ form.error(model,'password')|raw }}
+		<p class="hint">
+			Hint: You may login with <code>demo/demo</code> or <code>admin/admin</code>.
+		</p>
+	</div>
+
+	<div class="row rememberMe">
+		{{ form.checkBox(model,'rememberMe')|raw }}
+		{{ form.label(model,'rememberMe')|raw }}
+		{{ form.error(model,'rememberMe')|raw }}
+	</div>
+
+	<div class="row buttons">
+		{{ C.Html.submitButton('Login')|raw }}
+	</div>
+
+{{ void(this.endWidget()) }}
+</div><!-- form -->
+{% endblock %}	

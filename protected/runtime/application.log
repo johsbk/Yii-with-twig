@@ -2137,6 +2137,7 @@ Stack trace:
 REQUEST_URI=/mcs/index.php?r=site/login
 HTTP_REFERER=http://localhost/mcs/index.php?r=site/index
 ---
+<<<<<<< HEAD
 2012/01/05 16:38:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "page".' in D:\hps\yii\framework\web\CController.php:484
 Stack trace:
 #0 D:\hps\yii\framework\web\CController.php(271): CController->missingAction('page')
@@ -2530,4 +2531,403 @@ Stack trace:
 #11 {main}
 REQUEST_URI=/yiiwithtwig/index.php?r=site/contact
 HTTP_REFERER=http://localhost/yiiwithtwig/index.php
+=======
+2012/01/06 11:15:39 [error] [exception.Twig_Error_Syntax] exception 'Twig_Error_Syntax' with message 'Unexpected token "end of template" of value "" ("end of statement block" expected) in "/views/site/login.html" at line 49' in /home/johs/repos/Yii-with-twig/protected/extensions/Twig/TokenStream.php:72
+Stack trace:
+#0 /home/johs/repos/Yii-with-twig/protected/extensions/Twig/TokenParser/Block.php(59): Twig_TokenStream->expect(3)
+#1 /home/johs/repos/Yii-with-twig/protected/extensions/Twig/Parser.php(162): Twig_TokenParser_Block->parse(Object(Twig_Token))
+#2 /home/johs/repos/Yii-with-twig/protected/extensions/Twig/Parser.php(86): Twig_Parser->subparse(NULL)
+#3 /home/johs/repos/Yii-with-twig/protected/extensions/Twig/Environment.php(473): Twig_Parser->parse(Object(Twig_TokenStream))
+#4 /home/johs/repos/Yii-with-twig/protected/extensions/Twig/Environment.php(523): Twig_Environment->parse(Object(Twig_TokenStream))
+#5 /home/johs/repos/Yii-with-twig/protected/extensions/Twig/Environment.php(317): Twig_Environment->compileSource('{% extends 'vie...', '/views/site/log...')
+#6 /home/johs/repos/Yii-with-twig/protected/extensions/CTwigViewRenderer.php(69): Twig_Environment->loadTemplate('/views/site/log...')
+#7 /home/johs/repos/yii/framework/web/CBaseController.php(94): CTwigViewRenderer->renderFile(Object(SiteController), '/home/johs/repo...', Array, true)
+#8 /home/johs/repos/yii/framework/web/CController.php(870): CBaseController->renderFile('/home/johs/repo...', Array, true)
+#9 /home/johs/repos/yii/framework/web/CController.php(783): CController->renderPartial('login', Array, true)
+#10 /home/johs/repos/Yii-with-twig/protected/controllers/SiteController.php(92): CController->render('login', Array)
+#11 /home/johs/repos/yii/framework/web/actions/CInlineAction.php(50): SiteController->actionLogin()
+#12 /home/johs/repos/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#13 /home/johs/repos/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#14 /home/johs/repos/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /home/johs/repos/yii/framework/web/CWebApplication.php(276): CController->run('login')
+#16 /home/johs/repos/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('site/login')
+#17 /home/johs/repos/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#18 /home/johs/repos/Yii-with-twig/index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/yii-with-twig/index.php?r=site/login
+HTTP_REFERER=http://localhost/yii-with-twig/
+---
+2012/01/06 11:21:13 [error] [exception.Twig_Error_Syntax] exception 'Twig_Error_Syntax' with message 'A hash key must be followed by a colon (:). Unexpected token "operator" of value "=" ("punctuation" expected with value ":") in "/views/site/contact.html" at line 23' in /home/johs/repos/Yii-with-twig/protected/extensions/Twig/TokenStream.php:72
+Stack trace:
+#0 /home/johs/repos/Yii-with-twig/protected/extensions/Twig/ExpressionParser.php(256): Twig_TokenStream->expect(9, ':', 'A hash key must...')
+#1 /home/johs/repos/Yii-with-twig/protected/extensions/Twig/ExpressionParser.php(159): Twig_ExpressionParser->parseHashExpression()
+#2 /home/johs/repos/Yii-with-twig/protected/extensions/Twig/ExpressionParser.php(85): Twig_ExpressionParser->parsePrimaryExpression()
+#3 /home/johs/repos/Yii-with-twig/protected/extensions/Twig/ExpressionParser.php(42): Twig_ExpressionParser->getPrimary()
+#4 /home/johs/repos/Yii-with-twig/protected/extensions/Twig/ExpressionParser.php(398): Twig_ExpressionParser->parseExpression()
+#5 /home/johs/repos/Yii-with-twig/protected/extensions/Twig/ExpressionParser.php(338): Twig_ExpressionParser->parseArguments()
+#6 /home/johs/repos/Yii-with-twig/protected/extensions/Twig/ExpressionParser.php(272): Twig_ExpressionParser->parseSubscriptExpression(Object(Twig_Node_Expression_Name))
+#7 /home/johs/repos/Yii-with-twig/protected/extensions/Twig/ExpressionParser.php(165): Twig_ExpressionParser->parsePostfixExpression(Object(Twig_Node_Expression_Name))
+#8 /home/johs/repos/Yii-with-twig/protected/extensions/Twig/ExpressionParser.php(85): Twig_ExpressionParser->parsePrimaryExpression()
+#9 /home/johs/repos/Yii-with-twig/protected/extensions/Twig/ExpressionParser.php(42): Twig_ExpressionParser->getPrimary()
+#10 /home/johs/repos/Yii-with-twig/protected/extensions/Twig/ExpressionParser.php(428): Twig_ExpressionParser->parseExpression()
+#11 /home/johs/repos/Yii-with-twig/protected/extensions/Twig/TokenParser/Set.php(47): Twig_ExpressionParser->parseMultitargetExpression()
+#12 /home/johs/repos/Yii-with-twig/protected/extensions/Twig/Parser.php(162): Twig_TokenParser_Set->parse(Object(Twig_Token))
+#13 /home/johs/repos/Yii-with-twig/protected/extensions/Twig/TokenParser/If.php(49): Twig_Parser->subparse(Array)
+#14 /home/johs/repos/Yii-with-twig/protected/extensions/Twig/Parser.php(162): Twig_TokenParser_If->parse(Object(Twig_Token))
+#15 /home/johs/repos/Yii-with-twig/protected/extensions/Twig/Parser.php(86): Twig_Parser->subparse(NULL)
+#16 /home/johs/repos/Yii-with-twig/protected/extensions/Twig/Environment.php(473): Twig_Parser->parse(Object(Twig_TokenStream))
+#17 /home/johs/repos/Yii-with-twig/protected/extensions/Twig/Environment.php(523): Twig_Environment->parse(Object(Twig_TokenStream))
+#18 /home/johs/repos/Yii-with-twig/protected/extensions/Twig/Environment.php(317): Twig_Environment->compileSource('{% extends "vie...', '/views/site/con...')
+#19 /home/johs/repos/Yii-with-twig/protected/extensions/CTwigViewRenderer.php(69): Twig_Environment->loadTemplate('/views/site/con...')
+#20 /home/johs/repos/yii/framework/web/CBaseController.php(94): CTwigViewRenderer->renderFile(Object(SiteController), '/home/johs/repo...', Array, true)
+#21 /home/johs/repos/yii/framework/web/CController.php(870): CBaseController->renderFile('/home/johs/repo...', Array, true)
+#22 /home/johs/repos/yii/framework/web/CController.php(783): CController->renderPartial('contact', Array, true)
+#23 /home/johs/repos/Yii-with-twig/protected/controllers/SiteController.php(66): CController->render('contact', Array)
+#24 /home/johs/repos/yii/framework/web/actions/CInlineAction.php(50): SiteController->actionContact()
+#25 /home/johs/repos/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#26 /home/johs/repos/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#27 /home/johs/repos/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#28 /home/johs/repos/yii/framework/web/CWebApplication.php(276): CController->run('contact')
+#29 /home/johs/repos/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('site/contact')
+#30 /home/johs/repos/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#31 /home/johs/repos/Yii-with-twig/index.php(13): CApplication->run()
+#32 {main}
+REQUEST_URI=/yii-with-twig/index.php?r=site/contact
+HTTP_REFERER=http://localhost/yii-with-twig/index.php?r=site/index
+---
+2012/01/06 11:21:29 [error] [exception.Twig_Error_Syntax] exception 'Twig_Error_Syntax' with message 'A template that extends another one cannot have a body in "/views/site/contact.html" at line 4.' in /home/johs/repos/Yii-with-twig/protected/extensions/Twig/Parser.php:332
+Stack trace:
+#0 /home/johs/repos/Yii-with-twig/protected/extensions/Twig/Parser.php(346): Twig_Parser->filterBodyNodes(Object(Twig_Node_Text))
+#1 /home/johs/repos/Yii-with-twig/protected/extensions/Twig/Parser.php(89): Twig_Parser->filterBodyNodes(Object(Twig_Node))
+#2 /home/johs/repos/Yii-with-twig/protected/extensions/Twig/Environment.php(473): Twig_Parser->parse(Object(Twig_TokenStream))
+#3 /home/johs/repos/Yii-with-twig/protected/extensions/Twig/Environment.php(523): Twig_Environment->parse(Object(Twig_TokenStream))
+#4 /home/johs/repos/Yii-with-twig/protected/extensions/Twig/Environment.php(317): Twig_Environment->compileSource('{% extends "vie...', '/views/site/con...')
+#5 /home/johs/repos/Yii-with-twig/protected/extensions/CTwigViewRenderer.php(69): Twig_Environment->loadTemplate('/views/site/con...')
+#6 /home/johs/repos/yii/framework/web/CBaseController.php(94): CTwigViewRenderer->renderFile(Object(SiteController), '/home/johs/repo...', Array, true)
+#7 /home/johs/repos/yii/framework/web/CController.php(870): CBaseController->renderFile('/home/johs/repo...', Array, true)
+#8 /home/johs/repos/yii/framework/web/CController.php(783): CController->renderPartial('contact', Array, true)
+#9 /home/johs/repos/Yii-with-twig/protected/controllers/SiteController.php(66): CController->render('contact', Array)
+#10 /home/johs/repos/yii/framework/web/actions/CInlineAction.php(50): SiteController->actionContact()
+#11 /home/johs/repos/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#12 /home/johs/repos/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#13 /home/johs/repos/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /home/johs/repos/yii/framework/web/CWebApplication.php(276): CController->run('contact')
+#15 /home/johs/repos/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('site/contact')
+#16 /home/johs/repos/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#17 /home/johs/repos/Yii-with-twig/index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/yii-with-twig/index.php?r=site/contact
+HTTP_REFERER=http://localhost/yii-with-twig/index.php?r=site/index
+---
+2012/01/06 11:27:59 [error] [php] Object of class CCaptcha could not be converted to string (/home/johs/repos/Yii-with-twig/protected/runtime/views_twig/90/c9/d651b0c63759024a0c7d432f8346.php:180)
+Stack trace:
+#0 /home/johs/repos/Yii-with-twig/protected/runtime/views_twig/93/ed/a4155872dc0ae0d3ee6104e30e5e.php(57): __TwigTemplate_93eda4155872dc0ae0d3ee6104e30e5e->displayBlock()
+#1 /home/johs/repos/Yii-with-twig/protected/extensions/Twig/Template.php(269): __TwigTemplate_93eda4155872dc0ae0d3ee6104e30e5e->doDisplay()
+#2 /home/johs/repos/Yii-with-twig/protected/extensions/Twig/Template.php(230): __TwigTemplate_93eda4155872dc0ae0d3ee6104e30e5e->displayWithErrorHandling()
+#3 /home/johs/repos/Yii-with-twig/protected/runtime/views_twig/90/c9/d651b0c63759024a0c7d432f8346.php(25): __TwigTemplate_93eda4155872dc0ae0d3ee6104e30e5e->display()
+#4 /home/johs/repos/Yii-with-twig/protected/extensions/Twig/Template.php(269): __TwigTemplate_90c9d651b0c63759024a0c7d432f8346->doDisplay()
+#5 /home/johs/repos/Yii-with-twig/protected/extensions/Twig/Template.php(230): __TwigTemplate_90c9d651b0c63759024a0c7d432f8346->displayWithErrorHandling()
+#6 /home/johs/repos/Yii-with-twig/protected/extensions/Twig/Template.php(241): __TwigTemplate_90c9d651b0c63759024a0c7d432f8346->display()
+#7 /home/johs/repos/Yii-with-twig/protected/extensions/CTwigViewRenderer.php(71): __TwigTemplate_90c9d651b0c63759024a0c7d432f8346->render()
+#8 /home/johs/repos/yii/framework/web/CBaseController.php(94): CTwigViewRenderer->renderFile()
+#9 /home/johs/repos/yii/framework/web/CController.php(870): SiteController->renderFile()
+#10 /home/johs/repos/yii/framework/web/CController.php(783): SiteController->renderPartial()
+#11 /home/johs/repos/Yii-with-twig/protected/controllers/SiteController.php(66): SiteController->render()
+#12 /home/johs/repos/yii/framework/web/actions/CInlineAction.php(50): SiteController->actionContact()
+#13 /home/johs/repos/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#14 /home/johs/repos/yii/framework/web/CController.php(287): SiteController->runAction()
+#15 /home/johs/repos/yii/framework/web/CController.php(266): SiteController->runActionWithFilters()
+#16 /home/johs/repos/yii/framework/web/CWebApplication.php(276): SiteController->run()
+#17 /home/johs/repos/yii/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#18 /home/johs/repos/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#19 /home/johs/repos/Yii-with-twig/index.php(13): CWebApplication->run()
+REQUEST_URI=/yii-with-twig/index.php?r=site/contact
+in /home/johs/repos/Yii-with-twig/protected/runtime/views_twig/90/c9/d651b0c63759024a0c7d432f8346.php (180)
+in /home/johs/repos/Yii-with-twig/protected/extensions/Twig/Template.php (125)
+in /home/johs/repos/Yii-with-twig/protected/runtime/views_twig/93/ed/a4155872dc0ae0d3ee6104e30e5e.php (57)
+2012/01/06 11:28:00 [error] [php] Object of class CCaptcha could not be converted to string (/home/johs/repos/Yii-with-twig/protected/runtime/views_twig/90/c9/d651b0c63759024a0c7d432f8346.php:180)
+Stack trace:
+#0 /home/johs/repos/Yii-with-twig/protected/runtime/views_twig/93/ed/a4155872dc0ae0d3ee6104e30e5e.php(57): __TwigTemplate_93eda4155872dc0ae0d3ee6104e30e5e->displayBlock()
+#1 /home/johs/repos/Yii-with-twig/protected/extensions/Twig/Template.php(269): __TwigTemplate_93eda4155872dc0ae0d3ee6104e30e5e->doDisplay()
+#2 /home/johs/repos/Yii-with-twig/protected/extensions/Twig/Template.php(230): __TwigTemplate_93eda4155872dc0ae0d3ee6104e30e5e->displayWithErrorHandling()
+#3 /home/johs/repos/Yii-with-twig/protected/runtime/views_twig/90/c9/d651b0c63759024a0c7d432f8346.php(25): __TwigTemplate_93eda4155872dc0ae0d3ee6104e30e5e->display()
+#4 /home/johs/repos/Yii-with-twig/protected/extensions/Twig/Template.php(269): __TwigTemplate_90c9d651b0c63759024a0c7d432f8346->doDisplay()
+#5 /home/johs/repos/Yii-with-twig/protected/extensions/Twig/Template.php(230): __TwigTemplate_90c9d651b0c63759024a0c7d432f8346->displayWithErrorHandling()
+#6 /home/johs/repos/Yii-with-twig/protected/extensions/Twig/Template.php(241): __TwigTemplate_90c9d651b0c63759024a0c7d432f8346->display()
+#7 /home/johs/repos/Yii-with-twig/protected/extensions/CTwigViewRenderer.php(71): __TwigTemplate_90c9d651b0c63759024a0c7d432f8346->render()
+#8 /home/johs/repos/yii/framework/web/CBaseController.php(94): CTwigViewRenderer->renderFile()
+#9 /home/johs/repos/yii/framework/web/CController.php(870): SiteController->renderFile()
+#10 /home/johs/repos/yii/framework/web/CController.php(783): SiteController->renderPartial()
+#11 /home/johs/repos/Yii-with-twig/protected/controllers/SiteController.php(66): SiteController->render()
+#12 /home/johs/repos/yii/framework/web/actions/CInlineAction.php(50): SiteController->actionContact()
+#13 /home/johs/repos/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#14 /home/johs/repos/yii/framework/web/CController.php(287): SiteController->runAction()
+#15 /home/johs/repos/yii/framework/web/CController.php(266): SiteController->runActionWithFilters()
+#16 /home/johs/repos/yii/framework/web/CWebApplication.php(276): SiteController->run()
+#17 /home/johs/repos/yii/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#18 /home/johs/repos/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#19 /home/johs/repos/Yii-with-twig/index.php(13): CWebApplication->run()
+REQUEST_URI=/yii-with-twig/index.php?r=site/contact
+in /home/johs/repos/Yii-with-twig/protected/runtime/views_twig/90/c9/d651b0c63759024a0c7d432f8346.php (180)
+in /home/johs/repos/Yii-with-twig/protected/extensions/Twig/Template.php (125)
+in /home/johs/repos/Yii-with-twig/protected/runtime/views_twig/93/ed/a4155872dc0ae0d3ee6104e30e5e.php (57)
+2012/01/06 11:28:33 [error] [php] call_user_func_array() expects parameter 1 to be a valid callback, class 'CHtml' does not have a method 'subitbutton' (/home/johs/repos/Yii-with-twig/protected/extensions/CTwigViewRenderer.php:107)
+Stack trace:
+#0 unknown(0): twigCObj->subitbutton()
+#1 /home/johs/repos/Yii-with-twig/protected/extensions/Twig/Template.php(428): call_user_func_array()
+#2 /home/johs/repos/Yii-with-twig/protected/runtime/views_twig/90/c9/d651b0c63759024a0c7d432f8346.php(205): __TwigTemplate_90c9d651b0c63759024a0c7d432f8346->getAttribute()
+#3 unknown(0): __TwigTemplate_90c9d651b0c63759024a0c7d432f8346->block_content()
+#4 /home/johs/repos/Yii-with-twig/protected/extensions/Twig/Template.php(125): call_user_func()
+#5 /home/johs/repos/Yii-with-twig/protected/runtime/views_twig/93/ed/a4155872dc0ae0d3ee6104e30e5e.php(57): __TwigTemplate_93eda4155872dc0ae0d3ee6104e30e5e->displayBlock()
+#6 /home/johs/repos/Yii-with-twig/protected/extensions/Twig/Template.php(269): __TwigTemplate_93eda4155872dc0ae0d3ee6104e30e5e->doDisplay()
+#7 /home/johs/repos/Yii-with-twig/protected/extensions/Twig/Template.php(230): __TwigTemplate_93eda4155872dc0ae0d3ee6104e30e5e->displayWithErrorHandling()
+#8 /home/johs/repos/Yii-with-twig/protected/runtime/views_twig/90/c9/d651b0c63759024a0c7d432f8346.php(25): __TwigTemplate_93eda4155872dc0ae0d3ee6104e30e5e->display()
+#9 /home/johs/repos/Yii-with-twig/protected/extensions/Twig/Template.php(269): __TwigTemplate_90c9d651b0c63759024a0c7d432f8346->doDisplay()
+#10 /home/johs/repos/Yii-with-twig/protected/extensions/Twig/Template.php(230): __TwigTemplate_90c9d651b0c63759024a0c7d432f8346->displayWithErrorHandling()
+#11 /home/johs/repos/Yii-with-twig/protected/extensions/Twig/Template.php(241): __TwigTemplate_90c9d651b0c63759024a0c7d432f8346->display()
+#12 /home/johs/repos/Yii-with-twig/protected/extensions/CTwigViewRenderer.php(71): __TwigTemplate_90c9d651b0c63759024a0c7d432f8346->render()
+#13 /home/johs/repos/yii/framework/web/CBaseController.php(94): CTwigViewRenderer->renderFile()
+#14 /home/johs/repos/yii/framework/web/CController.php(870): SiteController->renderFile()
+#15 /home/johs/repos/yii/framework/web/CController.php(783): SiteController->renderPartial()
+#16 /home/johs/repos/Yii-with-twig/protected/controllers/SiteController.php(66): SiteController->render()
+#17 /home/johs/repos/yii/framework/web/actions/CInlineAction.php(50): SiteController->actionContact()
+#18 /home/johs/repos/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#19 /home/johs/repos/yii/framework/web/CController.php(287): SiteController->runAction()
+#20 /home/johs/repos/yii/framework/web/CController.php(266): SiteController->runActionWithFilters()
+#21 /home/johs/repos/yii/framework/web/CWebApplication.php(276): SiteController->run()
+#22 /home/johs/repos/yii/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#23 /home/johs/repos/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#24 /home/johs/repos/Yii-with-twig/index.php(13): CWebApplication->run()
+REQUEST_URI=/yii-with-twig/index.php?r=site/contact
+in /home/johs/repos/Yii-with-twig/protected/extensions/CTwigViewRenderer.php (107)
+in /home/johs/repos/Yii-with-twig/protected/extensions/Twig/Template.php (428)
+in /home/johs/repos/Yii-with-twig/protected/runtime/views_twig/90/c9/d651b0c63759024a0c7d432f8346.php (205)
+2012/01/06 12:48:11 [error] [exception.CException] exception 'CException' with message 'Alias "application.extensions.CTwigViewRenderer" is invalid. Make sure it points to an existing PHP file.' in /home/johs/repos/yii/framework/YiiBase.php:318
+Stack trace:
+#0 /home/johs/repos/yii/framework/YiiBase.php(198): YiiBase::import('application.ext...', true)
+#1 /home/johs/repos/yii/framework/base/CModule.php(387): YiiBase::createComponent(Array)
+#2 /home/johs/repos/yii/framework/web/CWebApplication.php(215): CModule->getComponent('viewRenderer')
+#3 /home/johs/repos/yii/framework/web/CController.php(696): CWebApplication->getViewRenderer()
+#4 /home/johs/repos/yii/framework/web/CController.php(592): CController->resolveViewFile('index', '/home/johs/repo...', '/home/johs/repo...', '/home/johs/repo...')
+#5 /home/johs/repos/yii/framework/web/CController.php(868): CController->getViewFile('index')
+#6 /home/johs/repos/yii/framework/web/CController.php(783): CController->renderPartial('index', NULL, true)
+#7 /home/johs/repos/Yii-with-twig/protected/controllers/SiteController.php(32): CController->render('index')
+#8 /home/johs/repos/yii/framework/web/actions/CInlineAction.php(50): SiteController->actionIndex()
+#9 /home/johs/repos/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#10 /home/johs/repos/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#11 /home/johs/repos/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/johs/repos/yii/framework/web/CWebApplication.php(276): CController->run('')
+#13 /home/johs/repos/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('')
+#14 /home/johs/repos/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /home/johs/repos/Yii-with-twig/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/yii-with-twig/
+---
+2012/01/06 12:48:59 [error] [php] require(/home/johs/repos/Yii-with-twig/protected/vendors/Twig/Autoloader.php): failed to open stream: No such file or directory (/home/johs/repos/Yii-with-twig/protected/extensions/ETwigViewRenderer.php:71)
+Stack trace:
+#0 /home/johs/repos/yii/framework/web/CWebApplication.php(215): CWebApplication->getComponent()
+#1 /home/johs/repos/yii/framework/web/CController.php(696): CWebApplication->getViewRenderer()
+#2 /home/johs/repos/yii/framework/web/CController.php(592): SiteController->resolveViewFile()
+#3 /home/johs/repos/yii/framework/web/CController.php(868): SiteController->getViewFile()
+#4 /home/johs/repos/yii/framework/web/CController.php(783): SiteController->renderPartial()
+#5 /home/johs/repos/Yii-with-twig/protected/controllers/SiteController.php(32): SiteController->render()
+#6 /home/johs/repos/yii/framework/web/actions/CInlineAction.php(50): SiteController->actionIndex()
+#7 /home/johs/repos/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#8 /home/johs/repos/yii/framework/web/CController.php(287): SiteController->runAction()
+#9 /home/johs/repos/yii/framework/web/CController.php(266): SiteController->runActionWithFilters()
+#10 /home/johs/repos/yii/framework/web/CWebApplication.php(276): SiteController->run()
+#11 /home/johs/repos/yii/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#12 /home/johs/repos/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#13 /home/johs/repos/Yii-with-twig/index.php(13): CWebApplication->run()
+REQUEST_URI=/yii-with-twig/
+in /home/johs/repos/Yii-with-twig/protected/extensions/ETwigViewRenderer.php (71)
+in /home/johs/repos/Yii-with-twig/protected/extensions/ETwigViewRenderer.php (71)
+in /home/johs/repos/Yii-with-twig/protected/controllers/SiteController.php (32)
+2012/01/06 12:51:12 [error] [php] require(/home/johs/repos/Yii-with-twig/protected/vendors/Twig/Autoloader.php): failed to open stream: No such file or directory (/home/johs/repos/Yii-with-twig/protected/extensions/ETwigViewRenderer.php:71)
+Stack trace:
+#0 /home/johs/repos/yii/framework/web/CWebApplication.php(215): CWebApplication->getComponent()
+#1 /home/johs/repos/yii/framework/web/CController.php(696): CWebApplication->getViewRenderer()
+#2 /home/johs/repos/yii/framework/web/CController.php(592): SiteController->resolveViewFile()
+#3 /home/johs/repos/yii/framework/web/CController.php(868): SiteController->getViewFile()
+#4 /home/johs/repos/yii/framework/web/CController.php(783): SiteController->renderPartial()
+#5 /home/johs/repos/Yii-with-twig/protected/controllers/SiteController.php(32): SiteController->render()
+#6 /home/johs/repos/yii/framework/web/actions/CInlineAction.php(50): SiteController->actionIndex()
+#7 /home/johs/repos/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#8 /home/johs/repos/yii/framework/web/CController.php(287): SiteController->runAction()
+#9 /home/johs/repos/yii/framework/web/CController.php(266): SiteController->runActionWithFilters()
+#10 /home/johs/repos/yii/framework/web/CWebApplication.php(276): SiteController->run()
+#11 /home/johs/repos/yii/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#12 /home/johs/repos/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#13 /home/johs/repos/Yii-with-twig/index.php(13): CWebApplication->run()
+REQUEST_URI=/yii-with-twig/
+in /home/johs/repos/Yii-with-twig/protected/extensions/ETwigViewRenderer.php (71)
+in /home/johs/repos/Yii-with-twig/protected/extensions/ETwigViewRenderer.php (71)
+in /home/johs/repos/Yii-with-twig/protected/controllers/SiteController.php (32)
+2012/01/06 12:51:13 [error] [php] require(/home/johs/repos/Yii-with-twig/protected/vendors/Twig/Autoloader.php): failed to open stream: No such file or directory (/home/johs/repos/Yii-with-twig/protected/extensions/ETwigViewRenderer.php:71)
+Stack trace:
+#0 /home/johs/repos/yii/framework/web/CWebApplication.php(215): CWebApplication->getComponent()
+#1 /home/johs/repos/yii/framework/web/CController.php(696): CWebApplication->getViewRenderer()
+#2 /home/johs/repos/yii/framework/web/CController.php(592): SiteController->resolveViewFile()
+#3 /home/johs/repos/yii/framework/web/CController.php(868): SiteController->getViewFile()
+#4 /home/johs/repos/yii/framework/web/CController.php(783): SiteController->renderPartial()
+#5 /home/johs/repos/Yii-with-twig/protected/controllers/SiteController.php(32): SiteController->render()
+#6 /home/johs/repos/yii/framework/web/actions/CInlineAction.php(50): SiteController->actionIndex()
+#7 /home/johs/repos/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#8 /home/johs/repos/yii/framework/web/CController.php(287): SiteController->runAction()
+#9 /home/johs/repos/yii/framework/web/CController.php(266): SiteController->runActionWithFilters()
+#10 /home/johs/repos/yii/framework/web/CWebApplication.php(276): SiteController->run()
+#11 /home/johs/repos/yii/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#12 /home/johs/repos/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#13 /home/johs/repos/Yii-with-twig/index.php(13): CWebApplication->run()
+REQUEST_URI=/yii-with-twig/
+in /home/johs/repos/Yii-with-twig/protected/extensions/ETwigViewRenderer.php (71)
+in /home/johs/repos/Yii-with-twig/protected/extensions/ETwigViewRenderer.php (71)
+in /home/johs/repos/Yii-with-twig/protected/controllers/SiteController.php (32)
+2012/01/06 13:02:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested view "about" was not found.' in /home/johs/repos/yii/framework/web/actions/CViewAction.php:113
+Stack trace:
+#0 /home/johs/repos/yii/framework/web/actions/CViewAction.php(124): CViewAction->resolveView('about')
+#1 /home/johs/repos/yii/framework/web/actions/CAction.php(75): CViewAction->run()
+#2 /home/johs/repos/yii/framework/web/CController.php(309): CAction->runWithParams(Array)
+#3 /home/johs/repos/yii/framework/web/CController.php(287): CController->runAction(Object(CViewAction))
+#4 /home/johs/repos/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CViewAction), Array)
+#5 /home/johs/repos/yii/framework/web/CWebApplication.php(276): CController->run('page')
+#6 /home/johs/repos/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('site/page')
+#7 /home/johs/repos/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#8 /home/johs/repos/Yii-with-twig/index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/yii-with-twig/index.php?r=site/page&view=about
+HTTP_REFERER=http://localhost/yii-with-twig/
+---
+2012/01/06 13:02:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested view "about" was not found.' in /home/johs/repos/yii/framework/web/actions/CViewAction.php:113
+Stack trace:
+#0 /home/johs/repos/yii/framework/web/actions/CViewAction.php(124): CViewAction->resolveView('about')
+#1 /home/johs/repos/yii/framework/web/actions/CAction.php(75): CViewAction->run()
+#2 /home/johs/repos/yii/framework/web/CController.php(309): CAction->runWithParams(Array)
+#3 /home/johs/repos/yii/framework/web/CController.php(287): CController->runAction(Object(CViewAction))
+#4 /home/johs/repos/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CViewAction), Array)
+#5 /home/johs/repos/yii/framework/web/CWebApplication.php(276): CController->run('page')
+#6 /home/johs/repos/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('site/page')
+#7 /home/johs/repos/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#8 /home/johs/repos/Yii-with-twig/index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/yii-with-twig/index.php?r=site/page&view=about
+HTTP_REFERER=http://localhost/yii-with-twig/
+---
+2012/01/06 13:02:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested view "about" was not found.' in /home/johs/repos/yii/framework/web/actions/CViewAction.php:113
+Stack trace:
+#0 /home/johs/repos/yii/framework/web/actions/CViewAction.php(124): CViewAction->resolveView('about')
+#1 /home/johs/repos/yii/framework/web/actions/CAction.php(75): CViewAction->run()
+#2 /home/johs/repos/yii/framework/web/CController.php(309): CAction->runWithParams(Array)
+#3 /home/johs/repos/yii/framework/web/CController.php(287): CController->runAction(Object(CViewAction))
+#4 /home/johs/repos/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CViewAction), Array)
+#5 /home/johs/repos/yii/framework/web/CWebApplication.php(276): CController->run('page')
+#6 /home/johs/repos/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('site/page')
+#7 /home/johs/repos/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#8 /home/johs/repos/Yii-with-twig/index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/yii-with-twig/index.php?r=site/page&view=about
+HTTP_REFERER=http://localhost/yii-with-twig/
+---
+2012/01/06 13:03:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested view "about" was not found.' in /home/johs/repos/yii/framework/web/actions/CViewAction.php:113
+Stack trace:
+#0 /home/johs/repos/yii/framework/web/actions/CViewAction.php(124): CViewAction->resolveView('about')
+#1 /home/johs/repos/yii/framework/web/actions/CAction.php(75): CViewAction->run()
+#2 /home/johs/repos/yii/framework/web/CController.php(309): CAction->runWithParams(Array)
+#3 /home/johs/repos/yii/framework/web/CController.php(287): CController->runAction(Object(CViewAction))
+#4 /home/johs/repos/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CViewAction), Array)
+#5 /home/johs/repos/yii/framework/web/CWebApplication.php(276): CController->run('page')
+#6 /home/johs/repos/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('site/page')
+#7 /home/johs/repos/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#8 /home/johs/repos/Yii-with-twig/index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/yii-with-twig/index.php?r=site/page&view=about
+HTTP_REFERER=http://localhost/yii-with-twig/
+---
+2012/01/06 13:03:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested view "about" was not found.' in /home/johs/repos/yii/framework/web/actions/CViewAction.php:113
+Stack trace:
+#0 /home/johs/repos/yii/framework/web/actions/CViewAction.php(124): CViewAction->resolveView('about')
+#1 /home/johs/repos/yii/framework/web/actions/CAction.php(75): CViewAction->run()
+#2 /home/johs/repos/yii/framework/web/CController.php(309): CAction->runWithParams(Array)
+#3 /home/johs/repos/yii/framework/web/CController.php(287): CController->runAction(Object(CViewAction))
+#4 /home/johs/repos/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CViewAction), Array)
+#5 /home/johs/repos/yii/framework/web/CWebApplication.php(276): CController->run('page')
+#6 /home/johs/repos/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('site/page')
+#7 /home/johs/repos/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#8 /home/johs/repos/Yii-with-twig/index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/yii-with-twig/index.php?r=site/page&view=about
+HTTP_REFERER=http://localhost/yii-with-twig/
+---
+2012/01/06 13:03:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested view "about" was not found.' in /home/johs/repos/yii/framework/web/actions/CViewAction.php:113
+Stack trace:
+#0 /home/johs/repos/yii/framework/web/actions/CViewAction.php(124): CViewAction->resolveView('about')
+#1 /home/johs/repos/yii/framework/web/actions/CAction.php(75): CViewAction->run()
+#2 /home/johs/repos/yii/framework/web/CController.php(309): CAction->runWithParams(Array)
+#3 /home/johs/repos/yii/framework/web/CController.php(287): CController->runAction(Object(CViewAction))
+#4 /home/johs/repos/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CViewAction), Array)
+#5 /home/johs/repos/yii/framework/web/CWebApplication.php(276): CController->run('page')
+#6 /home/johs/repos/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('site/page')
+#7 /home/johs/repos/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#8 /home/johs/repos/Yii-with-twig/index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/yii-with-twig/index.php?r=site/page&view=about
+HTTP_REFERER=http://localhost/yii-with-twig/
+---
+2012/01/06 13:03:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested view "about" was not found.' in /home/johs/repos/yii/framework/web/actions/CViewAction.php:113
+Stack trace:
+#0 /home/johs/repos/yii/framework/web/actions/CViewAction.php(124): CViewAction->resolveView('about')
+#1 /home/johs/repos/yii/framework/web/actions/CAction.php(75): CViewAction->run()
+#2 /home/johs/repos/yii/framework/web/CController.php(309): CAction->runWithParams(Array)
+#3 /home/johs/repos/yii/framework/web/CController.php(287): CController->runAction(Object(CViewAction))
+#4 /home/johs/repos/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CViewAction), Array)
+#5 /home/johs/repos/yii/framework/web/CWebApplication.php(276): CController->run('page')
+#6 /home/johs/repos/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('site/page')
+#7 /home/johs/repos/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#8 /home/johs/repos/Yii-with-twig/index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/yii-with-twig/index.php?r=site/page&view=about
+HTTP_REFERER=http://localhost/yii-with-twig/
+---
+2012/01/06 13:03:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "about".' in /home/johs/repos/yii/framework/web/CController.php:484
+Stack trace:
+#0 /home/johs/repos/yii/framework/web/CController.php(271): CController->missingAction('about')
+#1 /home/johs/repos/yii/framework/web/CWebApplication.php(276): CController->run('about')
+#2 /home/johs/repos/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('site/about')
+#3 /home/johs/repos/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/johs/repos/Yii-with-twig/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii-with-twig/index.php?r=site/about
+---
+2012/01/06 13:04:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "about".' in /home/johs/repos/yii/framework/web/CController.php:484
+Stack trace:
+#0 /home/johs/repos/yii/framework/web/CController.php(271): CController->missingAction('about')
+#1 /home/johs/repos/yii/framework/web/CWebApplication.php(276): CController->run('about')
+#2 /home/johs/repos/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('site/about')
+#3 /home/johs/repos/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/johs/repos/Yii-with-twig/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii-with-twig/index.php?r=site/about
+---
+2012/01/06 13:07:06 [error] [exception.CException] exception 'CException' with message 'Property "ETwigViewRenderer.autoescape" is not defined.' in /home/johs/repos/yii/framework/base/CComponent.php:174
+Stack trace:
+#0 /home/johs/repos/yii/framework/YiiBase.php(222): CComponent->__set('autoescape', true)
+#1 /home/johs/repos/yii/framework/base/CModule.php(387): YiiBase::createComponent(Array)
+#2 /home/johs/repos/yii/framework/web/CWebApplication.php(215): CModule->getComponent('viewRenderer')
+#3 /home/johs/repos/yii/framework/web/CController.php(696): CWebApplication->getViewRenderer()
+#4 /home/johs/repos/yii/framework/web/CController.php(592): CController->resolveViewFile('login', '/home/johs/repo...', '/home/johs/repo...', '/home/johs/repo...')
+#5 /home/johs/repos/yii/framework/web/CController.php(868): CController->getViewFile('login')
+#6 /home/johs/repos/yii/framework/web/CController.php(783): CController->renderPartial('login', Array, true)
+#7 /home/johs/repos/Yii-with-twig/protected/controllers/SiteController.php(89): CController->render('login', Array)
+#8 /home/johs/repos/yii/framework/web/actions/CInlineAction.php(50): SiteController->actionLogin()
+#9 /home/johs/repos/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#10 /home/johs/repos/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#11 /home/johs/repos/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/johs/repos/yii/framework/web/CWebApplication.php(276): CController->run('login')
+#13 /home/johs/repos/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('site/login')
+#14 /home/johs/repos/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /home/johs/repos/Yii-with-twig/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/yii-with-twig/index.php?r=site/login
+HTTP_REFERER=http://localhost/yii-with-twig/index.php?r=site/contact
+>>>>>>> 510d2aef28ab7df663c3a315534c801063c1f7ee
 ---
